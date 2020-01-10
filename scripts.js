@@ -196,3 +196,105 @@ var ageMark = calculatAge(1948);
 var ageMarry = calculatAge(1969);
 console.log(ageJohn, ageMarry, ageMark);
 
+function yearsUntinRetirement(year, firstName) {
+    var age = calculatAge(year);
+    var retirement = 65 - age;
+    if (retirement < 0) {
+        console.log(firstName + " Has already retired")
+    } else {
+        console.log(firstName + " retires in " + retirement + " years");
+    }
+}
+yearsUntinRetirement(1990, "John");
+yearsUntinRetirement(1948, "Mark");
+yearsUntinRetirement(1969, "Marry");
+
+/*************************************************
+ * Funstions Statements and Expressions
+ */
+
+// Function declaration
+//function whatDoYouDo(job, firstName) {
+
+// Function Expression
+var whatDoYouDo = function (job, firstName) {
+    switch (job) {
+        case "teacher":
+            return firstName + " teachers kids how to code";
+        case "driver":
+            return firstName + " Drives a cab";
+        case "designer":
+            return firstName + " Designes web cites";
+        default:
+            return firstName + " Does something else";
+    }
+}
+
+console.log(whatDoYouDo("teacher", "John"));
+console.log(whatDoYouDo("designer", "Clint"));
+console.log(whatDoYouDo("driver", "Marry"));
+//Fuction Expression always has a result!
+//Fuction statment dont give an emeedit value
+//ie if(true) console.log
+// => undefined
+
+/***********************************************
+ * ARRAYS
+ */
+//Initialize new array
+//             0       1        2        3
+var names = ["John", "Mark", "Brett", "Clint"];
+var years = new Array(1990, 1969, 1948, 1975);
+console.log(names); // all names
+console.log(names.length);
+console.log(names[3]);// Only a given name in the array =>"Clint"
+
+// Mutate array data
+names[0] = "Jack";// changes the [0] name to new name
+names[names.length] = "Sinead";//add name to the end off arrays lenth
+console.log(names);
+
+//Different data types
+var clint = ["Clint", "Davis", 1975, "Designer", true];
+clint.push("Blue");// add to end
+clint.unshift("Mr"); //add to begining
+console.log(clint);
+
+clint.pop();//Takes the last one away
+clint.shift();//Takes the first one away
+console.log(clint);
+
+console.log(clint.indexOf(1975));//Asks in witch possion is 1975
+// If we get a -1 there there is a problem
+
+var isDesigner = clint.indexOf("teacher") === -1 ? "Clint is NOT a Teacher" : "Clint IS a designer";
+console.log(isDesigner);
+
+
+/*****************************
+* CODING CHALLENGE 3
+*/
+
+/*
+John and his family went on a holiday and went to 3 different restaurants. The bills were $124, $48 and $268.
+To tip the waiter a fair amount, John created a simple tip calculator (as a function).
+He likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+In the end, John would like to have 2 arrays:
+1) Containing all three tips (one for each bill)
+2) Containing all three final paid amounts (bill + tip).
+(NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
+GOOD LUCK 😀
+*/
+
+
+function tipCalclator(bill) {
+    if (bill < 50) {
+        0.2 * bill;
+    } else if (bill > 50 && bill < 200) {
+        0.15 * bill;
+    } else 0.1 * bill;
+}
+console.log(tipCalclator(124));
+
+
+
