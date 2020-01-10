@@ -165,16 +165,16 @@ GOOD LUCK 😀
 */
 
 
-var johnAve = 89 + 120 + 103 / 3;
-var markAve = 116 + 94 + 123 / 3;
-var marryAve = 97 + 134 + 105 / 3;
+var johnAve = (89 + 120 + 103) / 3;
+var markAve = (116 + 94 + 123) / 3;
+var marryAve = (97 + 134 + 105) / 3;
 console.log(johnAve, markAve, marryAve);
 
-if (johnAve > markAve && johnAve > marryAve) {
+if (johnAve > markAve && marryAve) {
     console.log("Johns Team Wins");
-} else if (marryAve > markAve && marryAve > johnAve) {
+} else if (marryAve > markAve && johnAve) {
     console.log("Marrys Team Wins");
-} else if (markAve > marryAve && markAve > johnAve) {
+} else if (markAve > marryAve && johnAve) {
     console.log("Marks Team Wins");
 } else {
     console.log("its a 3 way draw");
@@ -182,5 +182,17 @@ if (johnAve > markAve && johnAve > marryAve) {
 
 
 
+/*********************************************************
+ * FUCTIONS
+ */
 
+function calculatAge(birthYear) {
+    return 2020 - birthYear;
+    //      Name     Argument
+}
+var ageJohn = calculatAge(1990);
+//            call function(argument)
+var ageMark = calculatAge(1948);
+var ageMarry = calculatAge(1969);
+console.log(ageJohn, ageMarry, ageMark);
 
