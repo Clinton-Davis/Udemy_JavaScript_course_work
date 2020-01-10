@@ -24,3 +24,163 @@ console.log(johnBmi, markBmi);
 
 console.log("Is Marks BMI higher than Johns? " + markJohnBmi);
 
+// If Else Statments
+
+var firstName = "John";
+var civilStatus = "single";
+
+if (civilStatus === "married") {
+    console.log(firstName + " married!");
+} else {
+    console.log(firstName + " will be married soon");
+};
+
+var firstName = "John";
+var age = 57;
+
+if (age < 13) {
+    console.log(firstName + " is a boy");
+} else if (age >= 13 && age < 20) {
+    console.log(firstName + " is a teenager");
+} else if (age >= 20 && age < 30) {
+    console.log(firstName + " is a young man");
+} else {
+    console.log(firstName + " is a man");
+}
+
+// Ternary Operators
+
+var firstName = "John";
+var age = 22;
+
+age >= 18 ? console.log(firstName + " drinks beer.") : console.log(firstName + " drinks juice.");
+
+// OR
+
+var drinks = age >= 18 ? "beer" : "juice";
+console.log(drinks);
+
+// SWITCH STATMENT
+
+var job = "cop";
+switch (job) {
+    case "teacher":
+    case " Instucter":
+        console.log(firstName + " teaches kids how to code");
+        break;
+    case "driver":
+        console.log(firstName + " drives a cab");
+        break
+    case "designer":
+        console.log(firstName + " makes great webpages");
+        break
+    default:
+        console.log(firstName + " is a great guy");
+}
+
+var age = 1;
+switch (true) {
+    case age < 2:
+        console.log("is an infant");
+        break;
+    case age > 2 && age < 10:
+        console.log("is a young person");
+        break;
+    case age >= 10 && age < 20:
+        console.log(" getting there");
+        break;
+    default:
+        console.log("getting older");
+}
+
+/***************************************************
+ * Truthy and Falsy values and equality operators
+ */
+
+// falsy values are : undefined, null, 0, " ", NaN
+
+var height;
+
+if (height) { // decomes false because it is not defind
+    console.log("Var is defind");
+} else {
+    console.log("Var NOT defind");
+}
+
+
+var height;
+height = 20
+if (height) { // decomes True 
+    console.log("Var is defind");
+} else {
+    console.log("Var NOT defind");
+}
+
+var height;
+height = 0;
+if (height) { // it is defind but with a falsy so become NOT defind
+    console.log("Var is defind");
+} else {
+    console.log("Var NOT defind");
+}
+
+var height;
+height = 0
+if (height || height === 0) { // is true because we use ||(or)
+    console.log("Var is defind");
+} else {
+    console.log("Var NOT defind");
+}
+
+//Equality Operators ==(Non strict) does type coercion
+// (Converts to what it need to be): ie
+var height = 23; //number
+if (height == "23") { //checking to see are they the same
+    console.log("The == operator does type coercion");
+}
+
+var height = 23; //number
+if (height === "23") { //checking to see are they the same
+    console.log("The == operator does type coercion");
+} else {
+    console.log("Becomes False because === is a strick operator and have to be the same");
+}
+
+
+/*****************************
+* CODING CHALLENGE 2
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, 
+John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console. 
+Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. 
+HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+GOOD LUCK 😀
+*/
+
+
+var johnAve = 89 + 120 + 103 / 3;
+var markAve = 116 + 94 + 123 / 3;
+var marryAve = 97 + 134 + 105 / 3;
+console.log(johnAve, markAve, marryAve);
+
+if (johnAve > markAve && johnAve > marryAve) {
+    console.log("Johns Team Wins");
+} else if (marryAve > markAve && marryAve > johnAve) {
+    console.log("Marrys Team Wins");
+} else if (markAve > marryAve && markAve > johnAve) {
+    console.log("Marks Team Wins");
+} else {
+    console.log("its a 3 way draw");
+}
+
+
+
+
+
