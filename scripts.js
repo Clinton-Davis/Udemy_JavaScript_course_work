@@ -290,7 +290,7 @@ GOOD LUCK 😀
 */
 
 var totalTips = [];
-var totalBill = []
+var totalBills = [];
 function tipCalclator(bill) {
     if (bill < 50) {
         totalTips.push(bill * 0.2);
@@ -300,11 +300,16 @@ function tipCalclator(bill) {
         totalTips.push(bill * 0.1);
     }
 }
+totalBills.unshift(124 + 18.59);
+totalBills.push(48 + 9.6);
+totalBills.push(268 + 26.8);
+
 tipCalclator(124);
 tipCalclator(48);
 tipCalclator(268);
 console.log(totalTips);
-console.log(totalBill);
+console.log(totalBills);
+
 
 
 
