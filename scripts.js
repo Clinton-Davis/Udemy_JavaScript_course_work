@@ -288,7 +288,7 @@ In the end, John would like to have 2 arrays:
 (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 GOOD LUCK 😀
 */
-
+/********************CLINTS GO 
 var totalTips = [];
 var totalBills = [];
 function tipCalclator(bill) {
@@ -308,8 +308,27 @@ tipCalclator(124);
 tipCalclator(48);
 tipCalclator(268);
 console.log(totalTips);
-console.log(totalBills);
+console.log(totalBills); */
 
+function tipCalculator(bill) {
+    var percentage;
+    if (bill < 50) {
+        percentage = .2;
+    } else if (bill >= 50 && bill < 200) {
+        percentage = .15;
+    } else {
+        percentage = .1;
+    }
+    return percentage * bill;
+}
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+var finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+console.log(tips, finalValues);
 
 
 
