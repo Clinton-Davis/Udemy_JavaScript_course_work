@@ -406,43 +406,54 @@ Remember: BMI = mass / height^2 = mass / (height * height).
 (mass in kg and height in meter).
 GOOD LUCK 😀
 */
-
+/** My Go */
 var john = {
 	firstName: "John",
-	height: 200,
-	mass: 78,
+	height: 1.75,
+	mass: 88,
 	calclateBmi: function(bmi) {
-		this.bmi = (this.height * height) / this.mass;
+		this.bmi = this.mass / (this.height * this.height);
+		return this.bmi;
 	}
 };
 
 var mark = {
 	firstName: "Mark",
-	height: 200,
-	mass: 78,
-	calclateBmi: function(bmi) {
-		this.bmi = (this.height * height) / this.mass;
+	height: 1.78,
+	mass: 90, //()enpty because the fuction is in a object(method)
+	calclateBmi: function() {
+		this.bmi = this.mass / (this.height * this.height);
+		return this.bmi;
 	}
 };
-john.calclateBmi();
-mark.calclateBmi();
-console.log(john);
+// john,calclateBmi is a way but a better way because the bmi is returned
+// we can use the function right in the if statment.
+// call the fuction right from the if
 
-if (john.bmi > mark.bmi) {
-	console.log(john.firstName + " has the hightest BMI of " + john.bmi);
+if (john.calclateBmi() > mark.calclateBmi()) {
+	console.log(john.firstName + " has the hightest BMI");
 } else if (mark.bmi > john.bmi) {
-	console.log(mark.firstName + " has the hightest BMI of " + mark.bmi);
+	console.log(mark.firstName + " has the hightest BMI");
 } else {
-	console.log(
-		"They both have the same BMI's" +
-			" " +
-			john.firstName +
-			" " +
-			john.bmi +
-			" " +
-			" " +
-			mark.firstName +
-			" " +
-			mark.bmi
-	);
+	console.log("They both have the same BMI's");
+}
+console.log(john, mark);
+
+/*************************************
+ * Loops and Iterations
+ */
+
+//FOR LOOP
+//  |value of counter
+//  |          |condision
+//	|		   |		|How to increase the loop
+//  |  		   |		|eg: i += 2: counts up in 2's
+for (var i = 0; i <= 5; i++) {
+	console.log(i);
+}
+
+var names = ["John", "Mark", "Brett", "Clint"];
+
+for (var i = 0; i <= names.length; i++) {
+	console.log(names[i]);
 }
