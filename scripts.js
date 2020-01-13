@@ -393,10 +393,56 @@ console.log(clint);
  */
 
 /*
-Let's remember the first coding challenge where Mark and John compared their BMIs. Let's now implement the same functionality with objects and methods.
-1. For each of them, create an object with properties for their full name, mass, and height
-2. Then, add a method to each object to calculate the BMI. Save the BMI to the object and also return it from the method.
-3. In the end, log to the console who has the highest BMI, together with the full name and the respective BMI. Don't forget they might have the same BMI.
-Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and height in meter).
+Let's remember the first coding challenge where Mark and John compared their BMIs. 
+Let's now implement the same functionality with objects and methods.
+1. For each of them, create an object with properties for their 
+	full name, mass, and height
+2. Then, add a method to each object to calculate the BMI. 
+	Save the BMI to the object and also return it from the method.
+3. In the end, log to the console who has the highest BMI, 
+	together with the full name and the respective BMI.
+Don't forget they might have the same BMI.
+Remember: BMI = mass / height^2 = mass / (height * height). 
+(mass in kg and height in meter).
 GOOD LUCK 😀
 */
+
+var john = {
+	firstName: "John",
+	height: 200,
+	mass: 78,
+	calclateBmi: function(bmi) {
+		this.bmi = (this.height * height) / this.mass;
+	}
+};
+
+var mark = {
+	firstName: "Mark",
+	height: 200,
+	mass: 78,
+	calclateBmi: function(bmi) {
+		this.bmi = (this.height * height) / this.mass;
+	}
+};
+john.calclateBmi();
+mark.calclateBmi();
+console.log(john);
+
+if (john.bmi > mark.bmi) {
+	console.log(john.firstName + " has the hightest BMI of " + john.bmi);
+} else if (mark.bmi > john.bmi) {
+	console.log(mark.firstName + " has the hightest BMI of " + mark.bmi);
+} else {
+	console.log(
+		"They both have the same BMI's" +
+			" " +
+			john.firstName +
+			" " +
+			john.bmi +
+			" " +
+			" " +
+			mark.firstName +
+			" " +
+			mark.bmi
+	);
+}
