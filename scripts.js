@@ -10,7 +10,7 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 4. Print a string to the console containing the variable from step 3. (Something like "Is Mark's BMI higher than John's? true"). 
 GOOD LUCK 😀
 */
-
+/*
 var markHeight = 1.75;
 var markMass = 88;
 var markBmi = markMass / (markHeight * markHeight);
@@ -99,7 +99,7 @@ switch (true) {
  */
 
 // falsy values are : undefined, null, 0, " ", NaN
-
+/*
 var height;
 
 if (height) {
@@ -170,7 +170,7 @@ HINT: you will need the && operator to take the decision. If you can't solve thi
 5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
 GOOD LUCK 😀
 */
-
+/*
 var johnAve = (89 + 120 + 103) / 3;
 var markAve = (116 + 94 + 123) / 3;
 var marryAve = (97 + 134 + 105) / 3;
@@ -189,7 +189,7 @@ if (johnAve > markAve && marryAve) {
 /*********************************************************
  * FUCTIONS
  */
-
+/*
 function calculatAge(birthYear) {
 	return 2020 - birthYear;
 	//      Name     Argument
@@ -216,7 +216,7 @@ yearsUntinRetirement(1969, "Marry");
 /*************************************************
  * Funstions Statements and Expressions
  */
-
+/*
 // Function declaration
 //function whatDoYouDo(job, firstName) {
 
@@ -247,6 +247,7 @@ console.log(whatDoYouDo("driver", "Marry"));
  */
 //Initialize new array
 //             0       1        2        3
+/*
 var names = ["John", "Mark", "Brett", "Clint"];
 var years = new Array(1990, 1969, 1948, 1975);
 console.log(names); // all names
@@ -276,6 +277,7 @@ var isDesigner =
 		? "Clint is NOT a Teacher"
 		: "Clint IS a designer";
 console.log(isDesigner);
+*/
 
 /*****************************
  * CODING CHALLENGE 3
@@ -315,7 +317,7 @@ tipCalclator(48);
 tipCalclator(268);
 console.log(totalTips);
 console.log(totalBills); */
-
+/*
 function tipCalculator(bill) {
 	var percentage;
 	if (bill < 50) {
@@ -342,6 +344,7 @@ console.log(tips, finalValues);
  *  Key: Value,
  */
 // Object litural syntex
+/*
 var clint = {
 	firstName: "Clint",
 	lastName: "Davis",
@@ -354,14 +357,15 @@ console.log(clint.firstName);
 console.log(clint["job"]);
 var x = "birthYear";
 console.log(clint[x]);
-
+*/
 /***************************
  * Mutate
  */
+/*
 clint.job = "teacher";
 clint["firstName"] = "Clinton";
 console.log(clint);
-
+/*
 // New Object syntes
 var sinead = new Object();
 sinead.firstName = "sinead";
@@ -373,7 +377,7 @@ console.log(sinead);
 /***************************************************8
  * Objects and Methods
  */
-
+/*
 var clint = {
 	firstName: "Clint",
 	lastName: "Davis",
@@ -407,6 +411,7 @@ Remember: BMI = mass / height^2 = mass / (height * height).
 GOOD LUCK 😀
 */
 /** My Go */
+/*
 var john = {
 	firstName: "John",
 	height: 1.75,
@@ -439,6 +444,10 @@ if (john.calclateBmi() > mark.calclateBmi()) {
 }
 console.log(john, mark);
 
+
+
+
+
 /*************************************
  * Loops and Iterations
  */
@@ -448,12 +457,147 @@ console.log(john, mark);
 //  |          |condision
 //	|		   |		|How to increase the loop
 //  |  		   |		|eg: i += 2: counts up in 2's
-for (var i = 0; i <= 5; i++) {
-	console.log(i);
-}
+//for (var i = 0; i <= 5; i++) {
+//	console.log(i);
+//}
 
-var names = ["John", "Mark", "Brett", "Clint"];
+/* var names = ["John", "Mark", "Brett", "Clint"];
 
 for (var i = 0; i <= names.length; i++) {
 	console.log(names[i]);
 }
+
+// WHILE LOOP
+var i = 0;
+while (i < names.length) {
+	console.log(names[i]);
+	i++;
+}*/
+
+// continue and break statments
+// Continue
+//var names = ["John", "Mark", 2093, "Brett", "Clint", false];
+//for (var i = 0; i < names.length; i++) {
+//	if (typeof names[i] !== "string") continue;
+//if its in one line dont need {}
+//	console.log(names[i]);
+/*if on of the array values is not(!==) a "string"
+	ie 2093, then the loop continue on with out it.*/
+//}
+//Break
+//for (var i = 0; i < names.length; i++) {
+//	if (typeof names[i] !== "string") break;
+//	console.log(names[i]);
+//}
+/* Break stops the hole loop */
+
+//Reverse Challange
+//var i = 0;
+//for (var i = names.length - 1; i >= 0; i--) {
+//	console.log(names[i]);
+//}
+
+/*****************************
+ * CODING CHALLENGE 5
+ */
+
+/*
+Remember the tip calculator challenge? 
+Let's create a more advanced version using everything we learned!
+This time, John and his family went to 5 different restaurants. 
+The bills were $124, $48, $268, $180 and $42.
+John likes to tip 20% of the bill when the bill is less than 
+$50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.
+Implement a tip calculator using objects and loops:
+1. Create an object with an array for the bill values
+2. Add a method to calculate the tip
+3. This method should include a loop to iterate over all the paid bills 
+and do the tip calculations
+4. As an output, create 1) a new array containing all tips, and 
+2) an array containing final paid amounts (bill + tip). 
+HINT: Start with two empty arrays [] as properties and then fill them up in the loop.
+/*
+EXTRA AFTER FINISHING: Mark's family also went on a holiday,
+going to 4 different restaurants. The bills were $77, $375, $110, and $45.
+Mark likes to tip 25% of the bill when the bill is less than $100, 
+20% when the bill is between $100 and $300, and 10% if the bill is more than $300 (different than John).
+5. Implement the same functionality as before, this time using Mark's tipping rules
+6. Create a function (not a method) to calculate the average of a given array of tips. 
+HINT: Loop over the array, and in each iteration store the current sum in a 
+variable (starting from 0). After you have the sum of the array, 
+divide it by the number of elements in it (that's how you calculate the average)
+7. Calculate the average tip for each family
+8. Log to the console which family paid the highest tips on average
+GOOD LUCK 😀*/
+/*
+var john = {
+	fullName: "John Smith",
+	bills: [124, 48, 268, 180, 42],
+	tipCalc: function() {
+		this.tips = [];
+		this.finalValues = [];
+		for (var i = 0; i < this.bills.length; i++) {
+			// find the percentage as per rulles
+			var percentage;
+			var bill = this.bills[i]; // to make it easer and not repeat our selfs
+			if (bill < 50) {
+				percentage = 0.2;
+			} else if (bill > 50 && bill < 200) {
+				percentage = 0.15;
+			} else {
+				percentage = 0.1;
+			}
+			this.tips[i] = bill * percentage;
+			this.finalValues[i] = bill + bill * percentage;
+			// add results to the corrasponding possions
+		}
+	}
+};*/
+/*
+var mark = {
+	fullName: "Mark Fryer",
+	bills: [77, 375, 110, 45],
+	tipCalc: function() {
+		this.tips = [];
+		this.finalValues = [];
+		for (var i = 0; i < this.bills.length; i++) {
+			// find the percentage as per rulles
+			var percentage;
+			var bill = this.bills[i]; // to make it easer and not repeat our selfs
+			if (bill < 100) {
+				percentage = 0.25;
+			} else if (bill > 100 && bill < 300) {
+				percentage = 0.2;
+			} else {
+				percentage = 0.1;
+			}
+			this.tips[i] = bill * percentage;
+			this.finalValues[i] = bill + bill * percentage;
+			// add results to the corrasponding possions
+		}
+	}
+};*/
+/*
+function calculatAve(tips) {
+	var sum = 0;
+	for (var i = 0; i < tips.length; ++i) {
+		sum = sum + tips[i];
+	}
+	return sum / tips.length;
+}
+
+john.tipCalc();
+mark.tipCalc();
+john.average = calculatAve(john.tips);
+mark.average = calculatAve(mark.tips);
+console.log(john, mark);
+if (john.average > mark.average) {
+	console.log(
+		"John is the better Tipper in holiday with " + john.average + " Tips!"
+	);
+} else {
+	console.log(
+		"Mark is the better Tipper in holiday with " + mark.average + " Tips!"
+	);
+}
+*/
